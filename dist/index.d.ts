@@ -1,3 +1,4 @@
+import { BaseOptions } from 'jsbarcode';
 /**
  * @class PosPrinter
  * **/
@@ -38,7 +39,7 @@ export interface PosPrintData {
 	/**
 	 * @property type
 	 * @description type data to print: 'text' | 'barCode' | 'qrcode' | 'image' | 'table'
-	*/
+	 */
 	type: PosPrintType;
 	value?: string;
 	style?: PrintDataStyle;
@@ -101,6 +102,7 @@ export interface PosPrintOptions {
 		vertical: number;
 	};
 	pathTemplate?: string;
+	jsBarcodeSettings?: BaseOptions;
 }
 /**
  * @interface
